@@ -35,7 +35,7 @@ export const Products = ({ onAdd }: ProductsProps) => {
           {products.map((p) => (
             <article
               key={p.id}
-              className="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-elegant"
+              className="group relative overflow-hidden rounded-2xl glass-card-cream transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-elegant"
             >
               <div className="relative aspect-square overflow-hidden bg-gradient-glow">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -50,11 +50,11 @@ export const Products = ({ onAdd }: ProductsProps) => {
                 </div>
               </div>
               <div className="p-4 space-y-3">
-                <h3 className="font-semibold text-sm line-clamp-2 min-h-[2.5rem]">{p.name}</h3>
+                <h3 className="font-semibold text-sm line-clamp-2 min-h-[2.5rem] text-gray-900">{p.name}</h3>
                 <div className="flex items-center justify-between gap-2">
                   <div>
-                    <div className="text-xs text-muted-foreground">a partir de</div>
-                    <div className="text-xl font-black text-primary">
+                    <div className="text-xs text-gray-600">a partir de</div>
+                    <div className="text-xl font-black text-amber-600">
                       R$ {p.price.toFixed(2).replace(".", ",")}
                     </div>
                   </div>

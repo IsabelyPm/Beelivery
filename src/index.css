@@ -48,6 +48,7 @@
     --gradient-glow: linear-gradient(135deg, hsl(48 100% 65% / 0.4), hsl(30 100% 60% / 0.2));
     --gradient-dark: radial-gradient(ellipse at top, hsl(230 40% 12%), hsl(230 45% 4%));
     --gradient-card: linear-gradient(145deg, hsl(230 30% 11%), hsl(230 30% 8%));
+    --gradient-card-cream: linear-gradient(145deg, hsl(45 30% 95%), hsl(45 25% 90%));
 
     /* Shadows & glows */
     --glow-primary: 0 0 40px hsl(48 100% 55% / 0.5), 0 0 80px hsl(45 100% 65% / 0.25);
@@ -92,6 +93,13 @@
 @layer components {
   .glass-card {
     background: var(--gradient-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card-cream {
+    background: var(--gradient-card-cream);
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--border));
     box-shadow: var(--shadow-card);
